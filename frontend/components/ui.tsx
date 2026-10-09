@@ -64,7 +64,7 @@ export function Modal({ open, onClose, title, children, footer, wide = false }: 
   }, [open, onClose]);
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-[90] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-[2px] p-0 sm:p-4" onMouseDown={onClose}>
+    <div className="fixed inset-x-0 top-0 z-[90] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-[2px] p-0 sm:p-4" onMouseDown={onClose}>
       <div
         onMouseDown={(e) => e.stopPropagation()}
         className={cn('animate-pop bg-surface text-fg border border-line2 shadow-card w-full max-h-[92vh] flex flex-col rounded-t-3xl sm:rounded-3xl', wide ? 'sm:max-w-3xl' : 'sm:max-w-xl')}
