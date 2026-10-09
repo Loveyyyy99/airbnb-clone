@@ -68,10 +68,6 @@ function Inner() {
           </>
         )}
         <div className="flex items-center gap-4 my-6 text-xs text-muted"><div className="flex-1 h-px bg-line" />or<div className="flex-1 h-px bg-line" /></div>
-        <div className="grid grid-cols-2 gap-3">
-          <button onClick={() => social('Google')} className="border border-fg/70 rounded-lg py-3 font-semibold hover:bg-hover flex items-center justify-center gap-2"><span className="font-bold text-[#4285F4]">G</span> Google</button>
-          <button onClick={() => social('Apple')} className="border border-fg/70 rounded-lg py-3 font-semibold hover:bg-hover flex items-center justify-center gap-2"><span></span> Apple</button>
-        </div>
         <p className="text-xs text-muted mt-5 text-center">Demo account: <button className="underline" onClick={() => { setV('guest@demo.com'); setStep('id'); }}>guest@demo.com</button> · password123</p>
       </div>
     </div>
