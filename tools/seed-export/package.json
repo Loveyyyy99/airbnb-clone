@@ -1,0 +1,1 @@
+{ "name": "seed-export", "private": true, "scripts": { "export": "tsx export.ts" }, "devDependencies": { "tsx": "4.19.2" } }

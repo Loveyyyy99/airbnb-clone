@@ -1,0 +1,18 @@
+services:
+  api:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      JWT_SECRET: ${JWT_SECRET:-change-me-to-a-long-random-string-of-32-plus-chars}
+      CORS_ORIGINS: http://localhost:3000
+      PUBLIC_API_URL: http://localhost:8000
+    volumes: ["api-data:/data"]
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    depends_on: [api]
+volumes:
+  api-data:
