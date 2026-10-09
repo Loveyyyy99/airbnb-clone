@@ -102,7 +102,7 @@ function Inner() {
         </div>
       </div>
       <main className="flex-1 container-page py-6">
-        <div className="flex items-end justify-between mb-6 min-w-[250px]">
+        <div className="flex items-end justify-between mb-6 w-full">
           <div>
             <h1 className="text-lg font-semibold">{loading ? 'Searching…' : `${total} stay${total === 1 ? '' : 's'}`}{!loading && (f.where ? ` in ${f.where}` : ' to explore')}</h1>
             <p className="text-sm text-muted">
